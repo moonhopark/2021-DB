@@ -1,0 +1,53 @@
+<h1>{{title}}</h1>
+<table>
+  <tr>
+    <td>Dname</td>
+    <td>Dnumber</td>
+  </tr>
+  {{#each department}}
+    <form method='post'>
+      <tr>
+        <td>{{Dname}}</td>
+        <td>{{Dnumber}}</td>
+        <td style='border: none; margin-left: 10px;'>
+          <button
+            style='margin-left: 10px;'
+            name='del_department_Btn'
+            type='submit'
+            value='{{Dnumber}}'
+            formaction='/delete/department'
+          >
+            삭제
+          </button>
+        </td>
+      </tr>
+    </form>
+  {{/each}}
+</table>
+
+<h1>{{title2}}</h1>
+<table>
+  <tr>
+    <td>Pname</td>
+    <td>Pnumber</td>
+  </tr>
+  {{#each project}}
+    <form method='post'>
+      <tr>
+        <td>{{Pname}}</td>
+        <td>{{Pnumber}}</td>
+        <td style='border: none; margin-left: 10px;'>
+          <button
+            style='margin-left: 10px;'
+            name='del_project_Btn'
+            type='submit'
+            value='{{Pnumber}}'
+            formaction='/delete/project'
+          >
+            삭제
+          </button>
+        </td>
+      </tr>
+    </form>
+  {{/each}}
+</table>
